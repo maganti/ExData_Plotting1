@@ -16,7 +16,7 @@ d<-paste(febdata$Date,febdata$Time)
 #now converting the combined character vector into a Date class with the 
 # appropriate format
 datetime<-strptime(d, "%d/%m/%Y %H:%M:%S")
-#initiating a new png graphical device with width and height set to 480 and directly
+#initiating a new png graphical device with width and height set to 480 pixels and directly
 #writing the plot to the png device
 png(filename="plot3.png", width=480, height=480, units="px")
 #using the base plot function to create the plot and then annotating using the  points

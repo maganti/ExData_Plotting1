@@ -17,7 +17,8 @@ d<-paste(febdata$Date,febdata$Time)
 # appropriate format
 datetime<-strptime(d, "%d/%m/%Y %H:%M:%S")
 #using the base plot function to plot the datetime and Global_active_power variables
-#and then copying the plot to a png file
+#and then copying the plot to a png file, and setting the width and height to 480 pixels
+#each and the units as pixels
 plot(datetime, febdata$Global_active_power, xlab="",
         ylab="Global Active Power (kilowatts)", type="l")
 dev.copy(png, file="plot2.png", width=480, height=480, 

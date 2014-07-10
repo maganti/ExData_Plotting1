@@ -16,7 +16,7 @@ d<-paste(febdata$Date,febdata$Time)
 #now converting the combined character vector into a Date class with the 
 # appropriate format
 datetime<-strptime(d, "%d/%m/%Y %H:%M:%S")
-#initiating a new png graphical device with width and height set to 480 and directly
+#initiating a new png graphical device with width and height set to 480 pixels and directly
 #writing the plot to the png device
 png(filename="plot4.png", width=480, height=480, units="px")
 #setting the options in par for drawing the plots in 2X2 format, with 2 rows and 2 columns

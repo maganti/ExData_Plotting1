@@ -16,7 +16,7 @@ febdata<-hhdata[(hhdata$Date == "1/2/2007" | hhdata$Date == "2/2/2007"),]
 #using the base hist function to create the histogram
 hist(febdata$Global_active_power, col="red",main="Global Active Power",
      xlab="Global Active Power (kilowatts)")
-#copying the plot to a png file, setting the width and height to 490 pixels
+#copying the plot to a png file, setting the width and height to 480 pixels
 #each and the units as pixels
 dev.copy(png, file="plot1.png", width=480, height=480, units="px", color="red")
 dev.off()
