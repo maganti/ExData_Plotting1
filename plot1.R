@@ -4,7 +4,7 @@
 #reading in only the desired subset of data from the file, by looking for the pattern matching
 # 1/2/2007 or 2/2/2007, using grep, within a pipe call, the output of which is being sent to
 #read.table. na.strings is set to ? to replace all ? to NAs, stringsAsFactors is set to F to 
-#not convert columns variable c lassesto factors
+#not convert columns variable classes to factors
 #The second read.table call reads only the first line of the text file and sets the names of the 
 #columns in the dataset just created to the columns names in the header read in
 
@@ -17,7 +17,7 @@ colnames(febdata) <-names(read.table('household_power_consumption.txt',
 hist(febdata$Global_active_power, col="red",main="Global Active Power",
      xlab="Global Active Power (kilowatts)")
 
-#copying the plot to a png file, setting the width and height to 490 pixels
+#copying the plot to a png file, setting the width and height to 480 pixels
 #each and the units as pixels
 dev.copy(png, file="plot1.png", width=480, height=480, units="px", color="red")
 dev.off()

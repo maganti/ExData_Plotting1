@@ -4,7 +4,7 @@
 #reading in only the desired subset of data from the file, by looking for the pattern matching
 # 1/2/2007 or 2/2/2007, using grep, within a pipe call, the output of which is being sent to
 #read.table. na.strings is set to ? to replace all ? to NAs, stringsAsFactors is set to F to 
-#not convert columns variable c lassesto factors
+#not convert columns variable classes to factors
 #The second read.table call reads only the first line of the text file and sets the names of the 
 #columns in the dataset just created to the columns names in the header read in
 
@@ -20,8 +20,8 @@ d<-paste(febdata$Date,febdata$Time)
 # appropriate format
 datetime<-strptime(d, "%d/%m/%Y %H:%M:%S")
 
-#using the base plot function to plot the datetime and Global_active_power variables
-#and then copying the plot to a png file
+#copying the plot to a png file, setting the width and height to 480 pixels
+#each and the units as pixels
 plot(datetime, febdata$Global_active_power, xlab="",
         ylab="Global Active Power (kilowatts)", type="l")
 dev.copy(png, file="plot2.png", width=480, height=480, 

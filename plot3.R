@@ -4,7 +4,7 @@
 #reading in only the desired subset of data from the file, by looking for the pattern matching
 # 1/2/2007 or 2/2/2007, using grep, within a pipe call, the output of which is being sent to
 #read.table. na.strings is set to ? to replace all ? to NAs, stringsAsFactors is set to F to 
-#not convert columns variable c lassesto factors
+#not convert columns variable classes to factors
 #The second read.table call reads only the first line of the text file and sets the names of the 
 #columns in the dataset just created to the columns names in the header read in
 
@@ -20,7 +20,7 @@ d<-paste(febdata$Date,febdata$Time)
 # appropriate format
 datetime<-strptime(d, "%d/%m/%Y %H:%M:%S")
 
-#initiating a new png graphical device with width and height set to 480 and directly
+#initiating a new png graphical device with width and height set to 480 pixels and directly
 #writing the plot to the png device
 png(filename="plot3.png", width=480, height=480, units="px")
 
